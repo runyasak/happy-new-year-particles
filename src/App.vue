@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div class="wrapper">
     <Particles
       id="tsparticles"
-      class="snow-particle"
+      class="snow-particles"
       :options="{
         fpsLimit: 60,
           interactivity: {
@@ -122,12 +122,48 @@
         detectRetina: true
       }"
     ></Particles>
+    <div class="content">
+      <h1 class="cl-white">Happy New Year</h1>
+      <p class="cl-gray">We're not hiring.</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.snow-particle {
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 96px;
+}
+
+p {
+  font-size: 32px;
+}
+
+.wrapper {
+  position: relative;
   height: 100vh;
   background: linear-gradient(150deg, rgba(20,30,48,0.9962359943977591) 0%, rgba(28,131,224,1) 100%);
+}
+.cl-white {
+  color: #FFFFFF;
+}
+
+.cl-gray {
+  color: #DEDEDE;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.snow-particles {
+  height: 100vh;
 }
 </style>
